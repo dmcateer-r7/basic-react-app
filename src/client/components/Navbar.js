@@ -22,23 +22,22 @@ const Navigation = () => {
     <div>
       <Navbar color="light" light expand="md">
         <NavbarBrand href="/">
-          <h6>Basic React App</h6>
+          <h6 className='mt-1'>Basic React App</h6>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            
+
             <NavItem>
-              <NavLink href="/hello/">Hello</NavLink>
+              <NavLink href="/about">About</NavLink>
             </NavItem>
-            
+          
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 External Links
               </DropdownToggle>
               
               <DropdownMenu right>
-
                 <DropdownItem>
                   <NavLink href="https://google.com">Google</NavLink>
                 </DropdownItem>
@@ -52,9 +51,9 @@ const Navigation = () => {
                 <DropdownItem>
                   Reset
                 </DropdownItem>
-
               </DropdownMenu>
             </UncontrolledDropdown>
+            
           </Nav>
         </Collapse>
       </Navbar>

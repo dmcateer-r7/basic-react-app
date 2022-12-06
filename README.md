@@ -1,16 +1,13 @@
-# Basic NodeJs React App
+# Basic React App
 
-This is a basic application used for starting fullstack NodeJs applications. 
+This is a skeleton code base that can be used to quickly set up a react web app
 
-Stack built using React, Express and Webpack. 
-
-The app currently displays the top ten stories on https://news.ycombinator.com/ (aka Hacker News) to give an example of rendering dynamic content. 
-
-
+Stack built using React, Express & Webpack. 
 
 ## Requirements
- - Node JS: v12.16.x
- - NPM: 6.14.x
+ - Node JS: v18.12.1 (use node version manager (NVM) https://github.com/nvm-sh/nvm )
+ - Webpack: v5.73.0
+ - NPM: v9.1.3 
 
 
 ## Installation
@@ -20,13 +17,20 @@ From the root directory where the package.json file is located run the following
 npm install
 ```
 
-## Running The App
+## Running The App (Prodution mode)
 Running the following command will bundle the client side code into static files using webpack. This is then served by Express from the ```dist``` folder.
 
 ```bash
 npm run start
 ```
 
-## Performance
-The app currently receives 90+ scores when auditted using Google Lighthouse
-![Lighthouse audit](./lighthouse.png)
+## Running The App (Dev mode)
+Running the app in dev mode enables webpack hot reloading. Dev mode serves the frontend react app on port 8081 and the api separately on port 8080 for easier debugging.
+
+```bash
+npm run dev
+```
+
+## Components
+React components are created with Reactstrap
+See https://reactstrap.github.io/?path=/story/home-installation--page 

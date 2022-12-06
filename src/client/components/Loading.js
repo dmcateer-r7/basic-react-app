@@ -1,6 +1,7 @@
 import { Row, Col, Container } from "reactstrap";
 import React from 'react';
-import spinner from "./img/spinner.svg";
+import spinner from "../imgs/spinner.svg";
+import '../style.css'
 
 export default () => (
     <div>
@@ -10,7 +11,7 @@ export default () => (
                 <Col xs="4" lg="4" >
                     <div>
                         <center>
-                            <img src={spinner} alt="loading-spinner" />
+                            <img src={spinner} alt="loading-spinner" className="scaled"/>
                         </center>
                     </div>
                 </Col>

@@ -1,27 +1,25 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Card, CardHeader, CardBody } from 'reactstrap';
-import Loading from './Loading';
-import HackerNews from './HackerNews';
+import Loading from './components/Loading';
+import HackerNews from './components/HackerNews';
+
 
 export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      status: "loading",
+      status: "loading"
     };
   }
-
 
   componentDidMount = async () => {
     this.setState({
       status: "complete"
-    });
+    })
   }
-
 
   render() {
     const { status } = this.state;
-
     if( status === "loading"){
       return <Loading />
     } 
@@ -29,8 +27,10 @@ export default class Home extends Component {
     else if (status === "complete") {
       return (
         <Container>
-          <Row className="pb-3">
-            <Col xs="12" lg="12">
+          <br />
+          <h1>Welcome</h1>
+          <br /> 
+          <Col xs="12" lg="12">
               <Card>
                 <CardHeader>Hacker News</CardHeader>
                 <CardBody>
@@ -38,8 +38,6 @@ export default class Home extends Component {
                 </CardBody>
               </Card>
             </Col>
-          </Row>
-
         </Container>);
     } 
     

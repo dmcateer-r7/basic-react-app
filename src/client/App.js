@@ -1,31 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from './Home';
-import Hello from './Hello';
-import Navbar from './Navbar';
+import About from './components/About';
+import Navbar from './components/Navbar';
 
-
-
-
-const App = () => { 
+const App = () => {
   return (
-      <Router>
-        <div>
-          <Navbar />
-          <br />
-          <Switch>
-
-              <Route exact path="/">
-                <Home />
-              </Route>
-
-              <Route path="/hello">
-                <Hello />
-              </Route>
-                          
-          </Switch>
-        </div>
-      </Router>
+    <div>
+      <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+    </div>
   );
 };
 

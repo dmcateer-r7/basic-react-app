@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ListGroup, ListGroupItem, Button } from 'reactstrap';
 import Loading from './Loading';
-import { fetchHackerNews } from '../lib/fetchHackerNews';
+import { fetchHackerNews } from '../../lib/fetchHackerNews';
 
 export default class HackerNews extends Component {
   constructor(props) {
@@ -24,10 +24,11 @@ export default class HackerNews extends Component {
       status: 'complete'
     })
   }
+
   render() {
         const { hackerNews, status } = this.state;
         if (status === 'unset'){
-          return <center><Button onClick={this.getNews}>Fetch News</Button></center>
+          return <center><Button color="primary" onClick={this.getNews}>Fetch News</Button></center>
         } else if (status === 'loading') {
             return <Loading />
         } else if (status === 'complete') {
